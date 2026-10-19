@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>MedCheck Case Study | Ovia Krishnasamy</title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+
+</head>
+
+
+<body class="case-study-page">
+
+
+  <!-- FLOATING HOME BUTTON -->
+
+  <a
+    href="./index.html"
+    class="case-home-button"
+    aria-label="Back to home"
+  >
+    <i class="fa-solid fa-house"></i>
+  </a>
+
+
+  <main class="case-study-content">
+
+
+    <!-- ========================================
+         HERO
+    ========================================= -->
+
+    <header class="case-hero-new">
+
+      <p class="case-hero-label">
+        PRODUCT DESIGN · UX DESIGN · HEALTH
+      </p>
+
+      <h1>
+        Making FDA drug labels easier to understand
+        <br class="hero-break">
+        so people know what to watch for with a new medication.
+      </h1>
+
+    </header>
+
+
+    <!-- MAIN UI IMAGE -->
+
+    <figure class="cs-image cs-image-main cs-mockup">
+
+      <div class="cs-mockup-window">
+
+        <div class="cs-mockup-bar">
+          <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+          <i class="fa-solid fa-table-columns"></i>
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+
+        <div class="cs-mockup-screen">
+
+          <img src="./medcheck-home-screenshot.webp" alt="MedCheck home page">
+
+        </div>
+
+      </div>
+
+    </figure>
+
+
+    <!-- LIVE SITE CARD -->
+
+    <aside class="cs-live-card">
+
+      <p>MedCheck is live. Try searching a medication yourself.</p>
+
+      <a
+        class="cs-live-button"
+        href="https://medcheck-lemon.vercel.app/"
+        target="_blank"
+        rel="noopener"
+      >
+        View the live site
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+
+    </aside>
+
+
+    <!-- ========================================
+         OVERVIEW
+    ========================================= -->
+
+    <section class="cs-intro">
+
+      <article class="cs-intro-card">
+
+        <span>OVERVIEW</span>
+
+        <p>
+          MedCheck is a medication checker for adults starting a new
+          prescription or over-the-counter medicine, and the caregivers who
+          help them. I designed and built it end to end, turning long,
+          technical FDA drug labels into a clear, scannable page that
+          answers one question: what should I watch for?
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <!-- ROLE / TEAM / TIMELINE -->
+
+    <section class="case-snapshot case-snapshot-three case-snapshot-two">
+
+      <div>
+        <span>ROLE</span>
+        <strong>Lead UX Designer</strong>
+      </div>
+
+      <div>
+        <span>TIMELINE</span>
+        <strong>6 weeks</strong>
+      </div>
+
+      <div>
+        <span>TOOLS</span>
+        <strong>Figma, HTML, CSS, JavaScript, openFDA API</strong>
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         PROBLEM STATEMENT
+    ========================================= -->
+
+    <section class="cs-intro">
+
+      <article class="cs-intro-card">
+
+        <span>PROBLEM STATEMENT</span>
+
+        <p>
+          Official drug labels contain everything a person needs to know,
+          but they’re long, dense and written for professionals. Someone
+          starting a new medication, often anxious and short on time, has
+          to dig through pages of text to find the side effects and
+          warnings that matter. How might we help people quickly find what
+          to watch for, without changing what the label says?
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+    <!-- ========================================
+         CONSTRAINTS + RESULT (plain text, no boxes)
+    ========================================= -->
+
+    <section class="cs-process">
+
+      <div class="cs-process-block">
+
+        <span class="cs-label">CONSTRAINTS</span>
+
+        <div class="cs-stack">
+
+          <div class="cs-take">
+            <h3>⏳ Working with messy label data</h3>
+            <p class="cs-body">
+              The FDA label data has no “common side effects” field. Each
+              section is one long block of text, worded differently by every
+              drug company, so early results were inconsistent: some
+              medications showed no side effects, no drug class, or even the
+              wrong product. The design had to work for every medication, not
+              just the one on my screen.
+            </p>
+          </div>
+
+          <div class="cs-take">
+            <h3>⚕️ Accuracy over simplicity</h3>
+            <p class="cs-body">
+              Health information can’t be oversimplified. I could make the
+              wording plainer, but not change the meaning, so every summary
+              comes from the label’s own text, the full label is one click
+              away, and the site is clear that it doesn’t replace advice
+              from a doctor or pharmacist.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="cs-process-block">
+
+        <span class="cs-label">RESULT</span>
+
+        <h2>
+          A one-page medication checker that puts what to watch for first
+        </h2>
+
+        <p class="cs-body">
+          Instead of searching through a full label, people type a
+          medication name and see a short, structured page: common side
+          effects first, then serious warnings, with any FDA boxed warning
+          flagged at the top of that list. Longer details stay tucked into
+          rows that open on demand.
+        </p>
+
+        <p class="cs-body">
+          The result feels calm and trustworthy, with every answer traceable
+          back to the original label. I tested the finished site against 78
+          real medications to make sure the design held up beyond a single
+          example.
+          <a href="https://medcheck-lemon.vercel.app/" target="_blank" rel="noopener">View the live site</a>
+          ·
+          <a href="https://github.com/oviak0311/medcheck" target="_blank" rel="noopener">View the source code</a>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         FEATURES
+    ========================================= -->
+
+    <section class="cs-features">
+
+
+      <!-- FEATURE 01 -->
+
+      <article class="cs-feature">
+
+        <figure class="cs-image cs-feature-image cs-mockup cs-mockup-sm">
+
+          <div class="cs-mockup-window">
+
+            <div class="cs-mockup-bar">
+              <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+              <i class="fa-solid fa-table-columns"></i>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="cs-mockup-screen">
+              <img src="./mc-search.webp" alt="Medication page showing the search bar and similar-product suggestions" loading="lazy">
+            </div>
+
+          </div>
+
+        </figure>
+
+        <div class="cs-feature-text">
+
+          <span class="cs-feature-number">01</span>
+
+          <h2>Search by brand or ingredient</h2>
+
+          <p>
+            People don’t always know the exact name on the box, so search
+            works with brand names or ingredients, with examples to try. If
+            the first match isn’t the right product, similar products are
+            suggested, and a misspelled name returns “Did you mean…?”
+            options instead of a dead end.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- FEATURE 02 (REVERSED) -->
+
+      <article class="cs-feature cs-feature-reverse">
+
+        <figure class="cs-image cs-feature-image cs-mockup cs-mockup-sm">
+
+          <div class="cs-mockup-window">
+
+            <div class="cs-mockup-bar">
+              <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+              <i class="fa-solid fa-table-columns"></i>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="cs-mockup-screen">
+              <img src="./mc-results.webp" alt="Ozempic results with common side effects and serious warnings" loading="lazy">
+            </div>
+
+          </div>
+
+        </figure>
+
+        <div class="cs-feature-text">
+
+          <span class="cs-feature-number">02</span>
+
+          <h2>Understand the essentials</h2>
+
+          <p>
+            The page follows the order people would ask in: what is this
+            medication, which side effects are common, and what’s serious?
+            Common side effects appear in plain language, and each serious
+            warning has a short “In short” summary. Boxed warnings are
+            tagged in red, and longer details stay closed until opened.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- FEATURE 03 -->
+
+      <article class="cs-feature">
+
+        <figure class="cs-image cs-feature-image cs-mockup cs-mockup-sm">
+
+          <div class="cs-mockup-window">
+
+            <div class="cs-mockup-bar">
+              <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+              <i class="fa-solid fa-table-columns"></i>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="cs-mockup-screen">
+              <img src="./mc-trust.webp" alt="Ozempic page with a boxed warning and expandable warnings" loading="lazy">
+            </div>
+
+          </div>
+
+        </figure>
+
+        <div class="cs-feature-text">
+
+          <span class="cs-feature-number">03</span>
+
+          <h2>Trust and transparency</h2>
+
+          <p>
+            In health, trust matters as much as clarity. Each result shows
+            the label date and manufacturer and links to the full label, so
+            the original text is one click away. A clear reminder says
+            MedCheck is educational and not a substitute for medical advice.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+
+    <!-- ========================================
+         THE PROCESS
+    ========================================= -->
+
+    <div class="cs-divider">
+      <span>THE PROCESS</span>
+    </div>
+
+
+    <section class="cs-process">
+
+
+      <!-- RESEARCH INSIGHTS -->
+
+      <div class="cs-process-block">
+
+        <span class="cs-label">RESEARCH INSIGHTS</span>
+
+        <h2>Learning from how medication information is shown today</h2>
+
+        <p class="cs-body">
+          To understand how medication information is shown today, I
+          reviewed leading health sites and the label data itself, looking
+          for what helps people find answers fast.
+        </p>
+
+        <div class="cs-insights">
+
+          <div class="cs-insight">
+            <span class="cs-insight-label">KEY INSIGHT #1</span>
+            The label has the answers but no structure. Every section is a
+            long block of text, worded differently each time.
+          </div>
+
+          <div class="cs-insight">
+            <span class="cs-insight-label">KEY INSIGHT #2</span>
+            Strong sites rank information by importance. Drugs.com leads
+            with boxed warnings and Mayo Clinic sorts by urgency.
+          </div>
+
+          <div class="cs-insight">
+            <span class="cs-insight-label">KEY INSIGHT #3</span>
+            Long detail works best on demand. WebMD tucks it into tabs,
+            which keeps the first view short.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESULT -->
+
+      <div class="cs-process-block">
+
+        <span class="cs-label">RESULT</span>
+
+        <h2>Switching focus from showing the label to answering a question</h2>
+
+        <p class="cs-body">
+          The research changed how I framed the problem. People don’t want
+          a better-looking label, they want an answer to “what should I
+          watch for?” That shifted the design from reformatting the label
+          to structuring it around that question: common side effects
+          first, then serious warnings, with detail on demand.
+        </p>
+
+        <p class="cs-body">
+          It also changed what I left out. I tested openFDA’s adverse event
+          reports, but those are submitted reports, not how often a side
+          effect really happens, and they include entries like “drug
+          ineffective.” Showing them could mislead, so they never made it
+          into the design.
+        </p>
+
+      </div>
+
+
+      <!-- ========================================
+           IDEATION
+      ========================================= -->
+
+      <div class="cs-process-block">
+
+        <span class="cs-label">IDEATION</span>
+
+        <h2>Finding the right amount of information</h2>
+
+        <p class="cs-body">
+          I explored three directions for the results page, judging each by
+          one question: does it help someone find what to watch for quickly,
+          without misleading them?
+        </p>
+
+        <div class="cs-insights">
+
+          <div class="cs-insight">
+            <span class="cs-insight-label">REACTIONS FIRST</span>
+            A top-10 chart of reported reactions and a symptom checker gave
+            people everything at once. Too much to take in, and the chart
+            implied causes it couldn’t prove.
+          </div>
+
+          <div class="cs-insight">
+            <span class="cs-insight-label">BOXED WARNING FIRST</span>
+            Following Drugs.com, the boxed warning would lead the page. But
+            people want to know what’s common first, so I kept common side
+            effects on top and tagged boxed warnings in red.
+          </div>
+
+          <div class="cs-insight">
+            <span class="cs-insight-label">ORDERED BY QUESTION</span>
+            Common side effects first, then serious warnings with boxed
+            warnings tagged, then longer details, with the source last.
+          </div>
+
+        </div>
+
+        <p class="cs-body cs-body-after">
+          I chose the third direction because it matched how people think
+          when they start a medication, and made it the basis for my
+          wireframes.
+        </p>
+
+      </div>
+
+
+      <!-- ========================================
+           USER JOURNEY AND PERSONA
+      ========================================= -->
+
+      <div class="cs-process-block cs-process-block-wide">
+
+        <span class="cs-label">USER FLOW</span>
+
+        <h2>Designing for the moments that could go wrong</h2>
+
+        <p class="cs-body">
+          Mapping the experience end to end helped me design for the moments
+          where it could go wrong. A person types a medication name, the
+          product is found, and its label and drug class are retrieved. If
+          nothing is found, they’re offered spelling suggestions to pick
+          from, so they’re never left at a dead end.
+        </p>
+
+        <figure class="cs-image cs-image-wide cs-image-large cs-mockup cs-mockup-diagram">
+
+          <div class="cs-mockup-window">
+
+            <div class="cs-mockup-bar">
+              <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+              <i class="fa-solid fa-table-columns"></i>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="cs-mockup-screen">
+              <img src="./mc-flow.webp" alt="How a search works: from typing a name to showing the result" loading="lazy">
+            </div>
+
+          </div>
+
+        </figure>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- DESIGN DIVIDER -->
+
+    <div class="cs-divider">
+      <span>THE DESIGN</span>
+    </div>
+
+
+    <section class="cs-process">
+
+
+      <!-- ========================================
+           WIREFRAMES
+      ========================================= -->
+
+      <div class="cs-process-block cs-process-block-wide">
+
+        <span class="cs-label">WIREFRAMES</span>
+
+        <h2>Starting with two key screens</h2>
+
+        <p class="cs-body">
+          I sketched two key screens in Figma: a home page and a medication
+          page. The home page is a single search bar over a dark photo,
+          inspired by Vrbo’s focused search. The medication page follows the
+          order people would ask in, ending with the source.
+        </p>
+
+        <figure class="cs-image cs-image-wide cs-image-large cs-mockup cs-mockup-diagram">
+
+          <div class="cs-mockup-window">
+
+            <div class="cs-mockup-bar">
+              <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+              <i class="fa-solid fa-table-columns"></i>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="cs-mockup-screen">
+              <img src="./mc-wireframes.webp" alt="Wireframes of the home page and medication page" loading="lazy">
+            </div>
+
+          </div>
+
+        </figure>
+
+      </div>
+
+
+      <!-- ========================================
+           VISUAL DESIGN
+      ========================================= -->
+
+      <div class="cs-process-block cs-process-block-wide">
+
+        <span class="cs-label">VISUAL DESIGN</span>
+
+        <h2>Creating a calm and trustworthy reading experience</h2>
+
+        <p class="cs-body">
+          MedCheck’s style guide pairs a clean white background with
+          amber, red and blue accents to create a more approachable
+          experience for the user. Amber marks common side effects, red
+          marks serious warnings, and blue is used for links and buttons,
+          with navy anchoring the home page and footer. Using very few
+          cards groups the information, helps the user digest it
+          effectively, and lets the content lead.
+        </p>
+
+        <figure class="cs-image cs-image-wide cs-image-large cs-mockup cs-mockup-diagram">
+
+          <div class="cs-mockup-window">
+
+            <div class="cs-mockup-bar">
+              <span class="cs-mockup-dots"><i></i><i></i><i></i></span>
+              <i class="fa-solid fa-table-columns"></i>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="cs-mockup-screen">
+              <img src="./mc-visual.webp" alt="Final home page and medication page" loading="lazy">
+            </div>
+
+          </div>
+
+        </figure>
+
+      </div>
+
+
+      <!-- ========================================
+           KEY TAKEAWAYS
+      ========================================= -->
+
+      <div class="cs-process-block">
+
+        <span class="cs-label">KEY TAKEAWAYS</span>
+
+        <div class="cs-stack">
+
+          <div class="cs-take">
+            <h3>🧩 Designing for every case, not just one</h3>
+            <p class="cs-body">
+              Every label is written differently, so a fix that worked for one
+              medication could break another. I learned to design for the
+              full range of real data, and built a tester that checks 78
+              medications so I could trust the design beyond a single
+              example.
+            </p>
+          </div>
+
+          <div class="cs-take">
+            <h3>🔒 Clarity without changing the meaning</h3>
+            <p class="cs-body">
+              A summary that sounds right but changes the meaning is worse
+              than a long one. In health design, clarity can’t come at the
+              cost of accuracy, so every plain-language line traces back to
+              the label, with the full text one click away.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- ========================================
+         END OF PAGE
+    ========================================= -->
+
+    <section class="cs-end">
+
+      <h2>Thanks for reading</h2>
+
+      <p>Want to see more? Take a look at my other projects.</p>
+
+      <div class="cs-end-actions">
+
+        <a class="cs-live-button" href="./index.html">
+          View more work
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a class="cs-end-link" href="./about.html">About me</a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
